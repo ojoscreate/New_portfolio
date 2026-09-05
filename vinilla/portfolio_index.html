@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ojo Joshua — Frontend Developer</title>
+    <link rel="ojo icon" href="./icon/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" href="./icon/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
@@ -14,7 +16,11 @@
   <body>
     <!-- NAV -->
     <nav>
-      <a href="#" class="nav-logo">ojo<span>.</span>josh</a>
+      <a href="#" class="nav-logo">ojo<span>.</span>jo</a>
+      <!-- <input type="checkbox" id="menu-toggle" class="menu-toggle" /> -->
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <!-- <input type="checkbox" id="menu-toggle" class="menu-toggle" /> -->
+      <label for="menu-toggle" class="cancel">&#88;</label>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -410,9 +416,7 @@
         Ojoscreate
       </button>
       © <span id="yr"></span> · Lagos, Nigeria
-      <script>
-        document.getElementById("yr").textContent = new Date().getFullYear();
-      </script>
+      <script src="./index.js"></script>
     </footer>
   </body>
 </html>
