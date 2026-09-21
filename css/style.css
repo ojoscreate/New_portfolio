@@ -41,9 +41,21 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
-  background: rgba(248, 248, 244, 0.82);
-  backdrop-filter: blur(8px);
+  /* background: rgba(248, 248, 244, 0.82);
+  backdrop-filter: blur(20px); */
+  background-color: transparent;
   border-bottom: 1px solid var(--border);
+}
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(248, 248, 244, 0.82);
+  backdrop-filter: blur(20px);
+  z-index: -1;
 }
 .nav-logo {
   font-family: "Fira Code", monospace;
@@ -439,7 +451,7 @@ footer {
     display: block;
   }
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     /* height: 100dvb; */
@@ -448,23 +460,47 @@ footer {
     padding: 1rem;
     /* gap: 1.2rem; */
     left: 0;
-
-    background-color: rgba(37, 99, 235, 0.5);
-
     align-items: center;
     justify-content: center;
-    /* text-align:; */
   }
-  .nav-links li {
+  .nav-links::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(170, 194, 245, 0.4);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .cancel {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+  }
+
+  .nav-links a {
     padding: 0.75rem 0;
-    /* font-size: 6.5rem; */
+    color: var(--gray);
+    text-transform: bold;
+    font-size: 1.2rem;
   }
   section {
     padding: 3.5rem 1.2rem;
   }
   .hero {
-    padding: 7rem 1.2rem 3rem;
+    padding: 6rem 1.2rem 3rem;
   }
+  /* .hero {
+    padding: 7rem 1.2rem 3rem;
+  } */
   .about-grid {
     grid-template-columns: 1fr;
   }
