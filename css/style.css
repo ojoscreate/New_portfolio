@@ -488,7 +488,8 @@ footer {
 
   .nav-links a {
     padding: 0.75rem 0;
-    color: var(--gray);
+    color: var(--black);
+    /* mix-blend-mode: difference; */
     text-transform: bold;
     font-size: 1.2rem;
   }
